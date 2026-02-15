@@ -1,12 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import Header from './components/Header.jsx';
+import ProductList from './components/ProductList.jsx';
+import { products } from './data/products.js';
+import './styles/App.css';
 
 function App() {
   return (
     <div className="app">
-      <h1>QuickCart</h1>
+      <Header />
+      <main className="main-content">
+        <ProductList products={products} />
+      </main>
     </div>
   );
 }
